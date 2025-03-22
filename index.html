@@ -2603,7 +2603,7 @@
   <div class="page-wrapper layout-boxed">
     <div id="header" data-section-id="header" data-section-type="header-section"
       class="stickyHeader animated fadeInDown">
-     
+
     </div>
     <div class="mobile-nav-wrapper large-up--hide" role="navigation">
       <div class="closemobileMenu"><i class="ad ad-times-circle pull-right" aria-hidden="true"></i> Close Menu</div>
@@ -2677,7 +2677,7 @@
                   <div
                     class="slideshow__slide slideshow__slide--064cdb98-a801-4b86-bf50-693150a3f686 slick-slide slick-current slick-active"
                     data-slick-index="0" aria-hidden="false"
-                    style="width: 1119px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
+                    style="width: 1200px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
                     tabindex="0" role="tabpanel" id="slick-slide00" aria-describedby="slick-slide-control00"><a
                       href="./html/about-me.html" class="slideshow__link" tabindex="0">
                       <div
@@ -2708,7 +2708,7 @@
                         </picture>
                       </div>
                       <div class="slideshow__text-wrap bottomcenter">
-                        
+
                       </div>
                     </a></div>
                 </div>
@@ -2791,7 +2791,8 @@
                           lũng Silicon.</p>
                       </div>
 
-                      <a class="btn mob-btn-lg btn-sm btn--secondary" href="https://www.facebook.com/huongmysheo">XEM THÊM</a>
+                      <a class="btn mob-btn-lg btn-sm btn--secondary" href="https://www.facebook.com/huongmysheo">XEM
+                        THÊM</a>
 
                     </div>
                   </div>
@@ -2864,17 +2865,299 @@
           }
         </style>
       </div>
-      
+
       <div id="shopify-section-template--14579387990059__165201293854a63689" class="shopify-section index-section">
         <div class="sec-empty default"></div>
 
 
-      </div>
+        <!-- </div>
       <div id="shopify-section-template--14579387990059__16520137877684d8da" class="shopify-section index-section">
-        <div class="sec-empty default"></div>
+        <div class="sec-empty default"></div> -->
 
 
       </div>
+      <!-- About me section starts-->
+      <style>
+        * {
+          box-sizing: border-box;
+          margin: 0;
+          padding: 0;
+          font-family: 'Arial', sans-serif;
+        }
+
+        body {
+          background-color: #F5F5F5;
+        }
+
+        header {
+          text-align: center;
+          padding: 50px 20px 20px;
+        }
+
+        header h1 {
+          font-size: 3rem;
+          color: #333;
+          margin-bottom: 10px;
+        }
+
+        header h2 {
+          font-size: 1.5rem;
+          color: #888;
+        }
+
+        .about-me-container {
+          max-width: 1200px;
+          margin: 40px auto;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 20px;
+        }
+
+        .card {
+          border-radius: 15px;
+          overflow: hidden;
+          width: 300px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+          transition: transform 0.3s ease;
+          cursor: pointer;
+        }
+
+        .card:hover {
+          transform: translateY(-5px);
+        }
+
+        .card img {
+          width: 100%;
+          height: auto;
+        }
+
+        .card-content {
+          padding: 15px;
+          background-color: rgba(255, 255, 255, 0.85);
+        }
+
+        .card h2 {
+          font-size: 18px;
+          color: #333;
+          margin-bottom: 10px;
+        }
+
+        .card p {
+          font-size: 14px;
+          color: #666;
+          line-height: 1.5;
+        }
+
+        .card:nth-child(1) {
+          background-color: #ffd1dc;
+        }
+
+        .card:nth-child(2) {
+          background-color: #b5ead7;
+        }
+
+        .card:nth-child(3) {
+          background-color: #c7ceea;
+        }
+
+        .card:nth-child(4) {
+          background-color: #ffdac1;
+        }
+
+        .card:nth-child(5) {
+          background-color: #e2f0cb;
+        }
+
+        .card:nth-child(6) {
+          background-color: #f1cbff;
+        }
+
+        .popup {
+          display: none;
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(0, 0, 0, 0.6);
+          justify-content: center;
+          align-items: center;
+          z-index: 1000;
+        }
+
+        .popup-content {
+          background: white;
+          padding: 30px;
+          max-width: 600px;
+          border-radius: 10px;
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          position: relative;
+          overflow: auto;
+          /* Make popup scrollable */
+          max-width: 80vw;
+          max-height: 80vh;
+        }
+
+        .close-btn {
+          position: absolute;
+          top: 10px;
+          right: 15px;
+          background: none;
+          border: none;
+          font-size: 20px;
+          cursor: pointer;
+        }
+      </style>
+
+      <div class="about-me-container">
+        <div class="card" onclick="showPopup(0)">
+          <img src="./images/about-me-card-2012.jpg" alt="Mysheo 2012">
+          <div class="card-content">
+            <h2>2012 - SÀI GÒN</h2>
+            <p>Một hành trình bắt đầu từ Sài Gòn, nơi đánh dấu bước chân đầu tiên trên con đường tìm kiếm chính mình.
+            </p>
+          </div>
+        </div>
+        <div class="card" onclick="showPopup(1)">
+          <img src="./images/about-me-card-2015.jpg" alt="Mysheo 2015">
+          <div class="card-content">
+            <h2>2015 - MỸ</h2>
+            <p>Giấc mơ du học Mỹ thành hiện thực, mở ra những trải nghiệm mới và thử thách không ngờ tới.</p>
+          </div>
+        </div>
+        <div class="card" onclick="showPopup(2)">
+          <img src="./images/about-me-card-2017.JPG" alt="Mysheo 2017">
+          <div class="card-content">
+            <h2>2017 - SAN FRANCISCO</h2>
+            <p>Lạc lối giữa thành phố công nghệ, học hỏi và thích nghi với một thế giới mới.</p>
+          </div>
+        </div>
+        <div class="card" onclick="showPopup(3)">
+          <img src="./images/about-me-card-2018.jpg" alt="Mysheo 2018">
+          <div class="card-content">
+            <h2>2018 - TECHNOLOGY</h2>
+            <p>Bước chân vào lĩnh vực công nghệ, bắt đầu hành trình phát triển sự nghiệp dev.</p>
+          </div>
+        </div>
+        <div class="card" onclick="showPopup(4)">
+          <img src="./images/about-me-card-2019.JPG" alt="Mysheo 2019">
+          <div class="card-content">
+            <h2>2019 - REFLECTION</h2>
+            <p>Nhìn lại hành trình đã qua, học hỏi từ những thất bại và hướng về tương lai.</p>
+          </div>
+        </div>
+        <div class="card" onclick="showPopup(5)">
+          <img src="./images/about-me-card-now.JPG" alt="Mysheo 2024">
+          <div class="card-content">
+            <h2>2024 - NOW</h2>
+            <p>Tạo ra sản phẩm của riêng mình, cống hiến và đồng hành cùng cộng đồng.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="popup" id="popup">
+        <div class="popup-content">
+          <button class="close-btn" onclick="closePopup()">&times;</button>
+          <div id="popup-text"></div>
+        </div>
+      </div>
+
+      <script>
+        const content1 = `Học hết 4 năm đại học, mình lang thang ở Hà Nội 1 năm, nhặt lá đá ống bơ, không biết phải làm gì với đời.
+Tình cờ gặp lại cô bạn cũ ở một đám cưới, bạn ấy đang sống ở Sài Gòn. Bạn cho mình cơ hội Nam Tiến. Mình vào Sài Gòn.
+Làm ở SG 2 năm, 2 công ty, gặp 1 người. Mình rất thích SG. Ấy là nơi mình mất 3 cái điện thoại, bị giữ xe 1 tháng, nếm mùi thất tình buồn đời. Nhưng ấy cũng là nơi mình cảm thấy được chia sẻ, được xoã, được nhậu. Nơi tình yêu tìm thấy mình. Nơi mình bắt đầu tìm kiếm trí tuệ.
+Tuổi 25, mình nghĩ "cần phải đi du học".
+Gặp trục trặc visa, duyên xuất ngoại chưa tới, mình lại lang thang ở Hà Nội, lại nhặt lá đá ống bơ.
+Nhưng lần này mình biết mình phải làm gì.
+Trong nửa năm, mình miệt mài tìm tòi từ làm video, làm web, design hình, thu âm podcast tới dạy học qua webinar, thành lập team, thuê phòng học, thử nghiệm phương pháp, tổ chức event. Hồi đó mình rất sợ tiền, chả bao giờ nghĩ kiếm ra tiền, làm vì đam mê và muốn giúp đỡ mọi người thôi. Nhưng ngay từ khi mình chưa kiếm ra đồng nào, có một anh đã bảo "anh định giá em 1 tỷ." Làm mình ngỡ ngàng nhưng cũng phấn chấn lắm.
+Cuối năm đó mình đi du học.`;
+        const content2 = `Mỹ.
+Ước mơ cả đời người.
+Nhớ 2 tuần đầu đi bộ từ trường về nhà, người lâng lâng không thể tin được mình đã đặt chân lên miền đất mơ ước rồi sao. Hồi bé mình chỉ dám mơ thôi đã là dũng cảm rồi, chứ có bao giờ nghĩ nó lại thành hiện thực!!
+(Đến bây giờ đôi khi mình vẫn có cái cảm giác ấy. Kiểu sống trong mơ nên hoài nghi thực tại đó mà :D )
+Cũng chính giấc mơ ấy ghìm mình lại.
+Khi kỳ học cuối cùng tới, mình rất lo. Thẳm sâu trong tâm hồn non nớt, mình hiểu là tính mình không sống ổn định được. 2 năm học thạc sỹ- 2 năm ổn định- sắp qua rồi. Mình không biết ra trường rồi mình sẽ làm gì? ở đâu? Và quan trọng nhất là: mình có còn mơ ước được nữa không? Khi ước mơ cả đời của mình đã thành hiện thực, vậy phần đời tiếp theo mình phải làm gì?
+Người ta nói "ước mơ là bánh lái của con tàu". Vậy khi không còn ước mơ nữa, làm gì cũng là để làm gì?
+Và kết cục là, mình quyết định không làm gì.
+Lại lang thang. Lại nhặt lá đá ống bơ. Lần này thực sự không biết phải làm gì. Mất phương hướng.`;
+        const content3 = `May mắn lớn nhất trong đời này: Lạc lối ở San Francisco.
+Trong 2 năm học, bạn bè hay hỏi "thế dự định của cậu sau khi ra trường thế nào, ở lại đây hay về nhà?" Mình nói "mình không biết, nhưng mình muốn chuyển qua San Francisco sống thử."
+Chưa từng thấy mặt mũi thành phố nó ra làm sao. Người thân: Zero. Bạn: 1 người duy nhất. Tất cả những gì mình biết về San Francisco là hình ảnh cái cầu Cổng Vàng trong sương mù và cái phòng chờ transit lung linh đẹp đẽ ở sân bay.
+Vâng, một ngày tháng 9 đầy nắng, mình đặt chân tới San Francisco. Hôm ấy trời cao trong xanh, bác tài xế Uber thân thiện, mình biết đời mình đã sang trang mới rồi.`;
+        const content4 = `Hồi bé mình rất thích đọc truyện cổ tích. Cấp 2 thì mê Sakura. Đến bây giờ khi tiếp xúc với công nghệ, mình vẫn không hết thích thú vì những cái sự kỳ diệu không thể tin được. 
+
+8X đời cuối. Mình sinh ra trong 1 bối cảnh hoang sơ: nhà không TV, không điện thoại, không máy tính, đi vệ sinh xong dội nước, tắm bằng chậu với nước nóng mẹ đun. Mặc quần mẹ vá đi học. Chơi trốn tìm, ô ăn quan, thả đỉa ba ba với các anh họ. Hè theo các anh đi câu cá, bắn chim. Đọc báo Nhi đồng, Thiếu niên tiền phong, Hoa học trò. Thích cậu bạn lớp bên là phải viết thư, nhờ chuyển hộ.
+Đến bây giờ, nhiều lúc mình vẫn không thể tin được cuộc đời mình sao lại ra nông nỗi này :D . Ngỡ ngàng. Làm sao mà mình có thể nói chuyện hàng ngày với cái anh này, thấy mặt anh ấy, mà không hề mất một đồng nào? Làm sao mà mình có thể ới cái điện thoại để hỏi những câu như "đi xe buýt từ nhà tới chỗ XYZ mất bao lâu?", "lịch ngày mai của tôi có kế hoạch gì?" và nó nói lại câu trả lời cho mình nghe như người thật. Sáng ngủ dậy bị chuột rút không ra ngoài được, cầm điện thoại lên có thể gọi đồ ăn, người ta mang đến tận nhà mà không phải trả 1 xu phí ship.
+Điều đặc biệt là, ở San Francisco, những diệu kỳ ấy không chỉ tồn tại trên đám mây và những cái app mình down về máy. Nó sống hiển hiện ngay trước mắt mình:
+- những anh đẹp trai mà mình thấy trên tàu: đeo ba lô, mặc áo, đeo thẻ của những công ty mà ai-cũng-biết-là-ai-đấy: Google, Faceobook, Dropbox, vân vân và mây mây.
+- dạo này Vimeo nó đang đổ bộ ngập tràn mấy cái bến tàu: nó thầu cả cái station, tất cả những cái cột, cái tường, đi đâu cũng thấy ad của nó.
+- chăm chỉ đi event sẽ được chiêm ngưỡng các anh hàng khủng. Cô bé ngây thơ như mình mà đã được tận mắt thấy CEO Google, cofounder Airbnb, CTO Slack, anh creator của NodeJS. Sau khi đã chiêm ngưỡng các anh này ở cự ly gần, bạn sẽ cảm thấy họ chả có gì khủng cả. Họ cũng ngây thơ hồn nhiên lắm :)
+
+
+Sống trong cái môi trường ấy, mình ra một quyết định không tưởng: Chuyển nghề sang làm developer!`
+        const content5 = `Và thế là, sau cái năm lang thang, nhặt lá đá ống bơ ở San Francisco ấy, sau nhiều đêm hì hụi cày cuốc học code và làm những dự án đầu , mình hiện giờ đang phỏng vấn làm developer. Cái công việc mà ngồi cắm mặt vào máy tính viết những dòng chữ xanh đỏ tím vàng không ai hiểu là cái gì í.
+Hôm nay bước vào tuổi 30 mất toi rồi! Mình không còn những giấc mơ to tát nữa. Chỉ mong coding skill của mình tốt lên, kiếm được job nào có nhiều anh dev đẹp zai :D . 
+Lúc nãy ngồi nghĩ viết cái note về tuổi trẻ, mình định viết topic "Tuổi trẻ là phải yêu không toan tính". Chẳng hiểu thế nào ngồi 2 tiếng lại lòi ra cái note sặc mùi "lý tưởng" thế này. Nhưng dù sao, cuối cùng mình xin cảm ơn tất cả bạn bè anh em họ hàng đã ủng hộ mình trong suốt những năm tháng tuổi 20. Lang thang nhiều quá, chẳng có cơ hội gặp mọi người nhiều, nhưng mình luôn biết ơn tất cả những người đã đi qua đi lại trong đời.
+Nếu có ngày lại thấy mình lang thang, nhặt lá đá ống bơ thì nhớ mời mình đi trà sữa/nhậu nhé!
+Update ngày 15/08/2019:
+Hôm nay mình launch nhẹ website mới.
+Tin vui này! Mình đã kiếm được việc rồi và đang làm front end developer cho một startup ở đây. Tiền lương rất khá nên mình quyết định cống hiến nhiều hơn, "give back" lại cho cộng đồng. Chính nhờ sự ủng hộ của các bạn mà mình mới có cơ hội học code, chính nhờ cộng đồng IELTS mình mới quen được bạn Quốc (tutor code của mình).
+Về đời sống cá nhân, mình vẫn tiếp tục thiền, nghe nhạc Shawn Mendes, yêu nhiều người và yêu tất cả các bạn.
+Mong các bạn sẽ luôn bên Mysheo nhé!
+`
+
+        const content6 = `Update ngày 29/10/2021:
+2 năm pandemic vừa qua lại chính là 2 năm đột phá trong sự nghiệp developer của mình. Cuối năm 2020, khi đang nhăn nhở làm ở một startup thì recruiter tìm đến mời mình interview cho Apple làm developer. Công ty mơ ước, sếp dễ chịu, đồng nghiệp siêu sao, một năm qua mình học hỏi được quá trời - không chỉ là về kiến thức technical mà còn là phong cách làm việc chuyên nghiệp, hiệu quả, hết mình vì chất lượng. Tất nhiên không dễ dàng gì - có những hôm code từ sáng đến tối, mắt mình mỏi không mở được ra luôn, nhưng nhìn lại tất cả thì quả đúng là một hành trình ngụp lặn trưởng thành mà không tiền nào mua nổi.
+
+Về mặt cộng đồng, mình vẫn đang tổ chức các workshop về Tiếng Anh và lập trình. Mình tin rằng đây là 2 kỹ năng chìa khoá để chúng ta đón đầu xu thế và tiệm cận tương lai. 
+
+Mà này, đừng nghĩ là mấy cái này khó quá không học được đâu nhé. Ai cũng có thể học và làm được. Nếu mình làm được thì bạn cũng làm được. 
+
+Update ngày 26/7/2024:
+
+Khi ở Apple, mình làm cho bộ phận Hardware engineering, phụ trách một bánh răng trong một cỗ máy to đùng.
+
+Ban đầu làm thì rất thích vì học hỏi dc tinh thần Apple - "luôn vươn lên tới hoàn hảo trong đơn giản".
+
+Nhưng sau một dạo mình bắt đầu tự hỏi "Chả nhẽ cả đời mình chỉ ngồi code mảng bé xíu này thôi à? Impact của mình ở đâu?" 
+
+Mình quyết định mang những điều đã học ở Apple để tự tạo nên sản phẩm của Mysheo, phục vụ cộng đồng học viên tại Mysheo. 
+
+Sau 2 năm hì hụi, đứa con software của cả team ra đời. Hiện giờ team Mysheo đã có một platform chuyên về online micro learning - một nơi mà học viên ghé thăm hàng ngày để 
+
+- chuẩn bị bài học
+
+- chọn khung giờ học, chọn giáo viên
+
+- thực hành thêm sau giờ học và được chữa tỉ mỉ
+
+Giờ không phải quần quật bán thân cho tư bản nữa :D, Mysheo được quyền quay lại chữa lành cho đứa trẻ trong mình. Mình dành thời gian để thiền, viết journal, reflect lại cuộc đời.
+
+Sống chậm, mà chất hơn. 
+
+Sau một hành trình dài vừa rồi, làm qua đủ các loại nghề, ai ngờ Mysheo tôi lại quay lại làm nghề giáo viên?! Có lẽ nó là cái duyên :). 
+
+Bạn nào kiên nhẫn đọc được tới những dòng này là ta cũng có duyên với nhau đó!`
+        const fullContents = [
+          content1,
+          content2,
+          content3,
+          content4,
+          content5,
+          content6
+        ];
+
+        function showPopup(index) {
+          document.getElementById('popup-text').innerText = fullContents[index];
+          document.getElementById('popup').style.display = 'flex';
+        }
+
+        function closePopup() {
+          document.getElementById('popup').style.display = 'none';
+        }
+      </script>
+      <!-- About me section ends-->
       <div id="shopify-section-template--14579387990059__1652101663b674d038" class="shopify-section index-section">
         <div class="content-indent default wow fadeIn" style="visibility: visible; animation-name: fadeIn;">
 
@@ -3196,8 +3479,8 @@
           }
         </style>
       </div>
-     
-     
+
+
       <div id="shopify-section-template--14579387990059__1658584406d51cf139" class="shopify-section index-section">
         <div class="sec-empty default"></div>
 
@@ -3250,7 +3533,8 @@
                           kinh nghiệm học tập và làm việc trong môi trường nước ngoài.</p>
                       </div>
 
-                      <a class="btn mob-btn-md btn-md btn--secondary" href="https://www.facebook.com/huongmysheo">Theo dõi ngay</a>
+                      <a class="btn mob-btn-md btn-md btn--secondary" href="https://www.facebook.com/huongmysheo">Theo
+                        dõi ngay</a>
 
                     </div>
                   </div>
@@ -7109,7 +7393,8 @@
       src="https://mysheo.com/wpm@43216b12w8b756714pa1ef4114mdff5bc02/custom/web-pixel-shopify-custom-pixel@0411/sandbox/modern/"
       id="web-pixel-sandbox-CUSTOM-shopify-custom-pixel-LAX-43216b12w8b756714pa1ef4114mdff5bc02"
       sandbox="allow-scripts allow-forms"
-      style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe></div>
+      style="height: 0px !important; width: 0px !important; visibility: hidden !important;"></iframe>
+  </div>
   <script type="text/javascript"
     charset="">!function (b, e, f, g, a, c, d) { b.fbq || (a = b.fbq = function () { a.callMethod ? a.callMethod.apply(a, arguments) : a.queue.push(arguments) }, b._fbq || (b._fbq = a), a.push = a, a.loaded = !0, a.version = "2.0", a.queue = [], c = e.createElement(f), c.async = !0, c.src = g, d = e.getElementsByTagName(f)[0], d.parentNode.insertBefore(c, d)) }(window, document, "script", "https://connect.facebook.net/en_US/fbevents.js"); fbq("init", "2107605252598605"); fbq("track", "PageView");</script>
   <noscript><img height="1" width="1" style="display:none" src="/tr"></noscript>
